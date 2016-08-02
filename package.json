@@ -1,0 +1,32 @@
+{
+  "name": "cordova-plugin-olli",
+  "version": "0.1.0",
+  "description": "Olli Griffin SDK for iOS",
+  "cordova": {
+    "id": "olli",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wes/olli-phonegap-plugin.git"
+  },
+  "keywords": [
+    "olli",
+    "griffin",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova-ios",
+      "version": ">=1.7.1"
+    }
+  ],
+  "author": "Wes Edling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wes/cordova-plugin-olli/issues"
+  },
+  "homepage": "https://github.com/wes/cordova-plugin-olli#readme"
+}

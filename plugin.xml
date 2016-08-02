@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-olli"
+    version="0.2.6">
+    <name>Olli</name>
+    <description>Olli</description>
+    <license>MIT</license>
+    <keywords>olli,griffin</keywords>
+    <repo>https://github.com/wes/cordova-plugin-olli.git</repo>
+    <issue></issue>
+
+    <engines>
+      <engine name="cordova-ios" version=">=1.7.1" />
+    </engines>
+
+    <js-module src="www/Olli.js" name="Olli">
+      <clobbers target="Olli" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Olli">
+                <param name="ios-package" value="Olli" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/Olli.h" />
+        <header-file src="src/ios/GTMagBarDevice.h" />
+        <source-file src="src/ios/Olli.m" />
+
+        <source-file src="src/ios/libGTMagBarSDK.a" framework="true" compiler-flags="-fno-objc-arc"/>
+
+        <framework src="ExternalAccessory.framework" />
+
+        <config-file target="*-Info.plist" parent="UISupportedExternalAccessoryProtocols">
+          <array>
+        		<string>com.griffintechnology.olli_uninjected</string>
+      	  </array>
+        </config-file>
+
+    </platform>
+
+</plugin>
