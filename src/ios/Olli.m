@@ -63,7 +63,7 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
-- (void)magbarDevice:(GTMagBarDevice*)device accessoryConnected:(BOOL)state {
+- (void)magbarDevice:(GTMagBarDevice*)ollidev accessoryConnected:(BOOL)state {
     
     NSLog(@"MAG BAR DEVICE CONNECTED %@", state);
 
