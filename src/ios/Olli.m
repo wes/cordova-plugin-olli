@@ -82,11 +82,11 @@
     
 }
 
-- (void)getConnectionStatus:(CDVInvokedUrlCommand*)command
-{
-    
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-}
+// - (void)getConnectionStatus:(CDVInvokedUrlCommand*)command
+// {
+//     
+//     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+// }
 
 - (void)startBarcode:(CDVInvokedUrlCommand *)command
 {
