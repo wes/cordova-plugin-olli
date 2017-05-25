@@ -52,9 +52,9 @@
 - (void)initOlli:(CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* pluginResult = nil;
-
+    NSLog(@"OLLI INIT");
     if (!ollidev) {
-
+        NSLog(@"OLLI INIT CONDITIONAL");
         ollidev = [GTMagBarDevice sharedDevice];
         ollidev.delegate = self;
 
