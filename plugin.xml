@@ -30,7 +30,7 @@
 
         <header-file src="src/ios/Olli.h" />
         <header-file src="src/ios/GTMagBarDevice.h" />
-        <header-file src="src'ios/GTMagBarDevice+AllowFinancialOnUnencryptedReadHead.h" />
+        <header-file src="src/ios/GTMagBarDevice+AllowFinancialOnUnencryptedReadHead.h" />
         <source-file src="src/ios/Olli.m" />
 
         <source-file src="src/ios/libGTMagBarSDK.a" framework="true" compiler-flags="-fno-objc-arc"/>
