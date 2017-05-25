@@ -67,7 +67,7 @@
     
     NSLog(@"MAG BAR DEVICE CONNECTED %@", state);
 
-    if(connected){
+    if(state == YES){
       [ollidev setScannerEnabled:YES];
       [ollidev setTimeout:5];
       [ollidev setChargingEnabled: YES];
@@ -76,7 +76,9 @@
       [ollidev setAllowFinancialOnUnencryptedReadHead: YES];
     }
 
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:connected];
+    // CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:connected];
+    NSString* retStr = [ NSString stringWithFormat:@"Olli.connectionChanged(%d);", state];
+   [self.webViewEngine evaluateJavaScript:retStr completionHandler:nil];
     
 }
 
