@@ -55,7 +55,7 @@
     NSLog(@"OLLI INIT");
     if (!ollidev) {
         NSLog(@"OLLI INIT CONDITIONAL");
-        ollidev = [GTMagBarDevice sharedDevice];
+        self.ollidev = [GTMagBarDevice sharedDevice];
         ollidev.delegate = self;
 
     }
