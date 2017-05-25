@@ -9,7 +9,7 @@
 
 @interface Olli()
 
-    GTMagBarDevice *ollidev;
+    //GTMagBarDevice *ollidev;
 
 @end
 
@@ -125,30 +125,30 @@
     //[[super webView] stringByEvaluatingJavaScriptFromString:retStr];
 // }
 
--(void)magbarDevice:(GTMagBarDevice *)device receivedBarcodeData:(NSString *)data barcodeType:(NSInteger)barcodeType {
-    
-    [self didRecieveBarcode:data];
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"scanbeep" ofType:@"wav"];
-    
-    theAudio = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-    theAudio.delegate = self;
-    [theAudio play];
-
-}
-
-- (void)magbarDevice:(GTMagBarDevice*)device receivedMagneticStripeData:(NSDictionary*)data {
-
-//    [self alert:[data objectForKey:kTrack1Clear]];
-    
-    NSDictionary *processedCard = [financialCard msProcessFinancialCard: [data objectForKey: kTrack1Clear] track2:[data objectForKey: kTrack2Clear]];
-    if(processedCard == nil){
-        [self alert:@"Card Could Not Be Read"];
-    }else{
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"CardSwipe" object:self userInfo:processedCard];
-    }
-    
-}
+// -(void)magbarDevice:(GTMagBarDevice *)device receivedBarcodeData:(NSString *)data barcodeType:(NSInteger)barcodeType {
+//     
+//     [self didRecieveBarcode:data];
+//     
+//     NSString *path = [[NSBundle mainBundle] pathForResource:@"scanbeep" ofType:@"wav"];
+//     
+//     theAudio = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+//     theAudio.delegate = self;
+//     [theAudio play];
+// 
+// }
+// 
+// - (void)magbarDevice:(GTMagBarDevice*)device receivedMagneticStripeData:(NSDictionary*)data {
+// 
+// //    [self alert:[data objectForKey:kTrack1Clear]];
+//     
+//     NSDictionary *processedCard = [financialCard msProcessFinancialCard: [data objectForKey: kTrack1Clear] track2:[data objectForKey: kTrack2Clear]];
+//     if(processedCard == nil){
+//         [self alert:@"Card Could Not Be Read"];
+//     }else{
+//         [[NSNotificationCenter defaultCenter] postNotificationName:@"CardSwipe" object:self userInfo:processedCard];
+//     }
+//     
+// }
 
 // - (void)magbarDevice:(GTMagBarDevice*)device receivedBadStripeData:(BOOL)bAlwaysYes {
     // [self alert:@"Could not read credit card"];
