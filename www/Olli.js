@@ -31,7 +31,7 @@ Olli.prototype.initOlli = function(connectionCallback, cardCallback, barcCallbac
     // this.btConnectedCallback = btConnCallback;
     // this.btDisconnectedCallback = btDisconnCallback;
 
-    exec(null, errorCallback, "Olli", "initDT", []);
+    exec(null, errorCallback, "Olli", "initOlli", []);
     //alert("Olli");
 };
 
