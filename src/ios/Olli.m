@@ -65,7 +65,7 @@
 
 - (void)magbarDevice:(GTMagBarDevice*)ollidev accessoryConnected:(BOOL)state {
     
-    NSLog(@"MAG BAR DEVICE CONNECTED %@", state);
+    NSLog(@"OLLI DEVICE CONNECTED %@", state);
 
     if(state == YES){
       [ollidev setScannerEnabled:YES];
