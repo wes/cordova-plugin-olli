@@ -11,16 +11,12 @@
 #import "GTMagBarDevice.h"
 #import "GTMagBarDevice+AllowFinancialOnUnencryptedReadHead.h"
 
-@interface Olli : CDVPlugin
+@interface Olli : CDVPlugin <GTMagBarDeviceDelegate>
 {
-
-  GTMagBarDevice *ollidev;
-
+    GTMagBarDevice *ollidev;
 }
 
 - (void)initOlli:(CDVInvokedUrlCommand*)command;
-- (void)getConnectionStatus:(CDVInvokedUrlCommand*)command;
-- (void)startBarcode:(CDVInvokedUrlCommand*)command;
-- (void)stopBarcode:(CDVInvokedUrlCommand*)command;
+- (void)startScan:(CDVInvokedUrlCommand*)command;
 
 @end
