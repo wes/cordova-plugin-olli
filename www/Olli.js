@@ -27,6 +27,10 @@ Olli.prototype.startScan = function() {
     exec(null, null, 'Olli', 'startScan', []);
 };
 
+Olli.prototype.endScan = function() {
+    exec(null, null, 'Olli', 'endScan', []);
+};
+
 Olli.prototype.connectionChanged = function(state) {
     this.connCallback(state);
 };

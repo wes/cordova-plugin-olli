@@ -18,5 +18,6 @@
 
 - (void)initOlli:(CDVInvokedUrlCommand*)command;
 - (void)startScan:(CDVInvokedUrlCommand*)command;
+- (void)endScan:(CDVInvokedUrlCommand*)command;
 
 @end

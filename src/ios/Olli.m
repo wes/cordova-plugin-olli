@@ -36,6 +36,14 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+- (void)endScan:(CDVInvokedUrlCommand*)command {
+    CDVPluginResult* pluginResult = nil;
+
+    [ollidev abortScan];
+
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
 - (void)magbarDevice:(GTMagBarDevice*)ollidev accessoryConnected:(BOOL)state {
 
     if(state == YES){
@@ -47,7 +55,6 @@
       [ollidev setAllowFinancialOnUnencryptedReadHead: YES];
     }
    
-    // CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:connected];
     NSString* retStr = [ NSString stringWithFormat:@"Olli.connectionChanged(%d);", state];
    [self.webViewEngine evaluateJavaScript:retStr completionHandler:nil];
     
